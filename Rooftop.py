@@ -2,7 +2,7 @@ import streamlit as st
 import time
 import google.generativeai as genai
 from datetime import datetime, timedelta
-
+#replace your api key
 # Set page title and layout
 st.set_page_config(page_title="RoofTop Gardening", layout="wide")
 
@@ -132,7 +132,7 @@ elif page == "Chatbot":
 
     # Initialize Gemini Model
     def setup_gemini():
-        API_KEY = "AIzaSyCZyJ5f0yYJWkxZOp7u-Txo0jgDDBhPB_k"  # Replace with your actual API key
+        API_KEY = "API KEY"  # Replace with your actual API key
         genai.configure(api_key=API_KEY)
         model = genai.GenerativeModel("gemini-1.5-flash")  # Using Flash 2 (Free version)
         return model
