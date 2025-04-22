@@ -6,7 +6,7 @@ from io import BytesIO
 from urllib.request import urlopen
 import librosa
 from transformers import Qwen2AudioForConditionalGeneration, AutoProcessor
-
+# replace your api key with gemi api key
 # Set page title and layout
 st.set_page_config(page_title="RoofTop Gardening", layout="wide")
 
@@ -136,7 +136,7 @@ elif page == "Chatbot":
 
     # Initialize Gemini Model
     def setup_gemini():
-        API_KEY = "AIzaSyCZyJ5f0yYJWkxZOp7u-Txo0jgDDBhPB_k"  
+        API_KEY = "Your api key"  
         genai.configure(api_key=API_KEY)
         model = genai.GenerativeModel("gemini-1.5-flash")  
         return model
